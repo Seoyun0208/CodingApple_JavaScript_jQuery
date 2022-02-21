@@ -4,6 +4,32 @@
   box-sizing: border-box;
 }
 
+/* 상단 : 모달창 */
+.black-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  padding: 30px;
+  display: none;
+}
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+/* 상단 : 로그인 */
+.btn-login {
+  background: gold;
+  border: none;
+  margin: 10px;
+  padding: 8px 24px;
+  border-radius: 5px;
+}
+
+/* 상단 : Navbar */
 .list-group {
   display: none;
 }
