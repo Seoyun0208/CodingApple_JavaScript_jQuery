@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="classList.css">
 
-    <title>if 문을 활용하여 모달창 내 아이디, 비밀번호 공백검사 기능 만들기</title>
+    <title>모달창 내 비밀번호 조건 미달 경고 메시지 만들기</title>
   </head>
   <body>
 
@@ -20,10 +20,11 @@
             <h4>로그인하세요</h4>
             <form action="success.html">
                 <div class="my-3">
-                    <input type="text" class="form-control" id="email">
+                    <input type="text" class="form-control" id="email" placeholder="이메일 형식의 아이디를 입력하세요.">
                 </div>
                 <div class="my-3">
-                    <input type="password" class="form-control" id="password">
+                    <input type="password" class="form-control" id="password" placeholder="비밀번호를 입력하세요.">
+                    <div id="pw-text">비밀번호가 8자리 미만입니다.</div>
                 </div>
                 <button type="submit" class="btn btn-primary" id="submit">전송</button>
                 <button type="button" class="btn btn-danger" id="close">닫기</button>
@@ -76,6 +77,23 @@
             } else if ($('#password').val().length < 8) {
                 e.preventDefault();
                 return alert('8자리 이상의 비밀번호를 입력하세요.');
+            }
+        })
+
+        // document.getElementById('email').addEventListener('input', function(){
+        //     console.log('input 이벤트는 input 에 입력한 값이 바뀔 때 발생한다.');
+        // })
+
+        // document.getElementById('email').addEventListener('change', function(){
+        //     console.log('change 이벤트는 input 에 입력한 값이 바뀌고 포커스를 잃을 때 발생한다.');
+        // })
+
+        $('#pw-text').hide();
+        $('#password').on('input', function(){
+            if($('#password').val() != '' && $('#password').val().length < 8){
+                $('#pw-text').show();
+            } else {
+                $('#pw-text').hide();
             }
         })
 

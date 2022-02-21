@@ -23,6 +23,12 @@
   padding: 30px;
 }
 
+#pw-text {
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
 /* 상단 : 로그인 */
 .btn-login {
   background: gold;
