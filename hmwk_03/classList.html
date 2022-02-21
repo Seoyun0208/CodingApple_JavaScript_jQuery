@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="classList.css">
 
-    <title>Dark Mode 와 Light Mode 전환 버튼 만들기</title>
+    <title>Dark Mode 와 Light Mode 전환 버튼 누르면 Mode 전환하는 기능 만들기</title>
   </head>
   <body>
 
@@ -105,8 +105,28 @@
             cnt++;
             if(cnt % 2){
                 $('#badge').html('🌞 Light Mode 🔄');
+                $('body').addClass('dark');
+                $('.navbar').addClass('navbar-dark');
+                $('.navbar').removeClass('navbar-light');
+                $('.navbar').addClass('bg-dark');
+                $('.navbar').removeClass('bg-light');
+                $('#logo').addClass('dark');
+                $('.btn-login').addClass('dark');
+                $('.list-group-item').addClass('dark');
+                $('.white-bg').addClass('dark');
+                $('.btn').addClass('dark');
             } else {
                 $('#badge').html('🌝 Dark Mode 🔄');
+                $('body').removeClass('dark');
+                $('.navbar').addClass('navbar-light');
+                $('.navbar').removeClass('navbar-dark');
+                $('.navbar').addClass('bg-light');
+                $('.navbar').removeClass('bg-dark');
+                $('#logo').removeClass('dark');
+                $('.btn-login').removeClass('dark');
+                $('.list-group-item').removeClass('dark');
+                $('.white-bg').removeClass('dark');
+                $('.btn').removeClass('dark');
             }
         })
 

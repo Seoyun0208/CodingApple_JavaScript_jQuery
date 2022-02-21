@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.dark {
+  background: rgb(33, 37, 41) !important;
+  color: gold !important;
+}
+
 /* 상단 : 모달창 */
 .black-bg {
   width: 100%;
@@ -47,11 +52,12 @@
   width: 130px;
   text-align: center;
   padding: 6px;
+  border: solid 1px gold;
 }
 
 .btn-login {
   background: gold;
-  border: none;
+  border: solid 1px gold;
   margin: 10px;
   padding: 8px 24px;
   border-radius: 5px;
