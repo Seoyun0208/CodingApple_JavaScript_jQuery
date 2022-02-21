@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert 박스 창 여닫기 및 창 내용 바꾸기 기능 만들기 </title>
+    <link rel="stylesheet" href="alertbox.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 상단 : alertbox -->
+        <div class="alert-box" id="alert">
+            <h3>알림창입니다.</h3>
+            <p><span id="title"></span>를 입력하세요.</p>
+            <button id="close">닫기</button>
+            <div style="clear:both"></div>
+        </div>
+        <!-- 하단 : 버튼 -->
+        <div class="btns">
+            <button onclick="showText('아이디', 'block')" class="btn">버튼 1</button>
+            <button onclick="showText('비밀번호', 'block')" class="btn">버튼 2</button>
+        </div>
+    </div>
+    <script>
+        function showText(title, display){
+            document.getElementById('title').innerHTML=title;
+            document.getElementById('alert').style.display=display;
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none'
+        })
+    </script>
+</body>
+</html>
