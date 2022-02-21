@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 상단 : alertbox */
+#alert {
+  display: none; /* 알림창 숨기기 */
+  margin: 20px;
+}
+
+.alert-box {
+  border: 1px solid black;
+  padding: 15px 20px;
+  margin-top: 10px;
+  width: 600px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.alert-box i {
+  float: right;
+  font-size: 20px;
+  color: rgb(179, 179, 179);
+}
+
+.yellow {
+  color: rgb(139, 97, 19);
+  background: rgb(255, 250, 175);
+  border: 1px solid rgb(255, 238, 0);
+}
+
+.blue {
+  color: rgb(67, 113, 197);
+  background: rgb(196, 216, 253);
+  border: 1px solid rgb(131, 168, 238);
+}
+
+.grey {
+  color: rgb(102, 102, 102);
+  background: rgb(214, 214, 214);
+  border: 1px solid rgb(173, 173, 173);
+}
+
+.wow {
+  font-weight: bold;
+}
+
+/* 하단 : 버튼 */
+button {
+  margin: 0 20px;
+  padding: 10px 15px;
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
