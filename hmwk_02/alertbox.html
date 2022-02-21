@@ -18,14 +18,14 @@
         </div>
         <!-- 하단 : 버튼 -->
         <div class="btns">
-            <button onclick="showText('아이디', 'block')" class="btn">버튼 1</button>
-            <button onclick="showText('비밀번호', 'block')" class="btn">버튼 2</button>
+            <button onclick="showText('아이디')" class="btn">버튼 1</button>
+            <button onclick="showText('비밀번호')" class="btn">버튼 2</button>
         </div>
     </div>
     <script>
-        function showText(title, display){
+        function showText(title){
             document.getElementById('title').innerHTML=title;
-            document.getElementById('alert').style.display=display;
+            document.getElementById('alert').style.display='block';
         }
 
         document.getElementById('close').addEventListener('click', function(){
