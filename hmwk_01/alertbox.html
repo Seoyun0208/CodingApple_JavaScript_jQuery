@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alert 박스 UI 만들기</title>
+    <title>Alert 박스 창 닫기 기능 만들기</title>
     <link rel="stylesheet" href="alertbox.css">
     <script src="https://kit.fontawesome.com/6e6545e710.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- 상단 : alertbox -->
     <div id="alert">
-        <div class="alert-box yellow">
+        <div class="alert-box yellow" id="yellow">
             <span class="wow">Holy guacamole!</span>
             <span> You should check in on some of those fields below.</span> 
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times close" onclick="closeAlert('yellow')"></i>
         </div>
         <div style="clear:both;"></div>
-        <div class="alert-box blue">
+        <div class="alert-box blue" id="blue">
             <span class="wow">Holy guacamole!</span>
             <span> You should check in on some of those fields below.</span> 
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times close" onclick="closeAlert('blue')"></i>
         </div>
         <div style="clear:both;"></div>
-        <div class="alert-box grey">
+        <div class="alert-box grey" id="grey">
             <span class="wow">Holy guacamole!</span>
             <span> You should check in on some of those fields below.</span> 
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times close" onclick="closeAlert('grey')"></i>
         </div>
         <div style="clear:both;"></div>
     </div>
@@ -34,6 +34,9 @@
     <button onclick="document.getElementById('alert').style.display='block'">알림창 띄우기</button>
 
     <script>
+        function closeAlert(color){
+            document.getElementById(color).style.display='none';
+        }
     </script>
 </body>
 </html>

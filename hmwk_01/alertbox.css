@@ -12,7 +12,7 @@
 
 .alert-box {
   border: 1px solid black;
-  padding: 15px 20px;
+  padding: 15px 10px 15px 20px;
   margin-top: 10px;
   width: 600px;
   border-radius: 5px;
@@ -23,6 +23,7 @@
   float: right;
   font-size: 20px;
   color: rgb(179, 179, 179);
+  width: 30px;
 }
 
 .yellow {
@@ -47,9 +48,13 @@
   font-weight: bold;
 }
 
+.close:hover {
+  cursor: pointer;
+}
+
 /* 하단 : 버튼 */
 button {
-  margin: 0 20px;
+  margin: 10px 20px;
   padding: 10px 15px;
   border: none;
   background: red;
@@ -57,4 +62,5 @@ button {
   border-radius: 5px;
   font-weight: bold;
   font-size: 16px;
+  cursor: pointer;
 }
