@@ -29,7 +29,26 @@
   margin-top: 5px;
 }
 
-/* 상단 : 로그인 */
+/* 상단 : Navbar */
+.navbar {
+  min-width: 500px;
+}
+
+#logo {
+  color: rgb(112, 74, 25);
+  font-weight: bold;
+  font-size: 25px;
+  flex-grow: 0.95;
+}
+
+#badge {
+  font-size: 12px;
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+  padding: 6px;
+}
+
 .btn-login {
   background: gold;
   border: none;
@@ -38,7 +57,6 @@
   border-radius: 5px;
 }
 
-/* 상단 : Navbar */
 .list-group {
   display: none;
 }

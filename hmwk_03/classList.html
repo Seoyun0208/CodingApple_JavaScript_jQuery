@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="classList.css">
 
-    <title>모달창 내 비밀번호 조건 미달 경고 메시지 만들기</title>
+    <title>Dark Mode 와 Light Mode 전환 버튼 만들기</title>
   </head>
   <body>
 
@@ -32,12 +32,14 @@
         </div>
     </div> 
 
-    <!-- 상단 : 로그인 -->
-    <button class="btn-login">로그인</button>
     <!-- 상단 : Navbar -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand">Navbar</span>
+            <span class="navbar-brand" id="logo">
+                Stalit Shop<br/>
+                <span class="badge bg-dark" id="badge">🌝 Dark Mode 🔄</span>
+            </span>
+            <button class="btn-login">로그인</button>
             <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -98,6 +100,16 @@
         })
 
         // 상단 : Navbar
+        var cnt = 0;
+        $('#badge').on('click', function(){
+            cnt++;
+            if(cnt % 2){
+                $('#badge').html('🌞 Light Mode 🔄');
+            } else {
+                $('#badge').html('🌝 Dark Mode 🔄');
+            }
+        })
+
         $('.navbar-toggler').eq(0).on('click', function(){
             $('.list-group').eq(0).slideToggle('show');
         })
