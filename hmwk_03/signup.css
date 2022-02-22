@@ -1,0 +1,43 @@
+.dark {
+  background: rgb(33, 37, 41) !important;
+  color: gold !important;
+}
+
+.navbar {
+  min-width: 500px;
+  width: 100%;
+}
+
+#logo {
+  color: rgb(112, 74, 25);
+  font-weight: bold;
+  font-size: 25px;
+  flex-grow: 0.95;
+  transition: all 0.5s;
+}
+
+#badge {
+  font-size: 12px;
+  cursor: pointer;
+  width: 130px;
+  text-align: center;
+  padding: 6px;
+  border: solid 1px gold;
+}
+
+#sign-up-content {
+  width: 500px;
+  height: 600px;
+  font-size: 16px;
+  margin: 100px auto;
+  padding: 20px 30px;
+  border: 4px double gold;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}

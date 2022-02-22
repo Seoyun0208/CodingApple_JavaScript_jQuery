@@ -15,7 +15,7 @@
   height: 100%;
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 5;
+  z-index: 10;
   padding: 30px;
   visibility: hidden; /* 애니메이션 줄 때 display: none 대용, 없애는 게 아니라 모습만 숨김 */
   opacity: 0;
@@ -39,6 +39,9 @@
 /* 상단 : Navbar */
 .navbar {
   min-width: 500px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
 }
 
 #logo {
@@ -46,6 +49,7 @@
   font-weight: bold;
   font-size: 25px;
   flex-grow: 0.95;
+  transition: all 0.5s;
 }
 
 #badge {
@@ -57,6 +61,16 @@
   border: solid 1px gold;
 }
 
+#sign-up {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+#sign-up:hover {
+  color: red;
+}
+
 .btn-login {
   background: gold;
   border: solid 1px gold;
@@ -66,7 +80,12 @@
 }
 
 .list-group {
+  position: fixed;
+  width: 100%;
+  margin-top: 100px;
+  z-index: 3;
   display: none;
+  transition: margin-top 0.5s;
 }
 
 .show {
@@ -77,7 +96,11 @@
 
 /* 상단 : Timeout */
 .alert {
-  margin: 0;
+  margin-top: 100px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  transition: margin-top 0.5s;
 }
 
 /* 상단 : 메인 */
