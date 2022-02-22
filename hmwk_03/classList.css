@@ -82,3 +82,42 @@
 .main-bg img {
   width: 100%;
 }
+
+/* 중앙 : 이미지 슬라이드 */
+.slide-container {
+  width: 300vw;
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}
+
+.slide-btns {
+  padding: 5px;
+  width: 100px;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide-btn {
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 70%;
+  font-weight: bold;
+  background: gold;
+  cursor: pointer;
+}
+
+.slide-btn:focus {
+  background: goldenrod;
+}
