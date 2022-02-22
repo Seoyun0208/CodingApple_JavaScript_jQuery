@@ -4,6 +4,10 @@ $('.btn-login').eq(0).on('click', function(){
 })
 
 $('#close').on('click', function(){
+    $('#email').val('');
+    $('#password').val('');
+    $('#pw-text1').hide();
+    $('#pw-text2').hide();
     $('.black-bg').eq(0).toggleClass('show');
 })
 
@@ -23,9 +27,7 @@ $('#submit').on('click', function(e){
     if($('#email').val() == '') {
         e.preventDefault();
         alert('아이디를 입력하세요.');
-    }
-
-    if(!isEmail($('#email').val())) {
+    } else if(!isEmail($('#email').val())) {
         e.preventDefault();
         alert('이메일 형식의 아이디가 아닙니다.');
     }
@@ -33,12 +35,10 @@ $('#submit').on('click', function(e){
     if ($('#password').val() == '') {
         e.preventDefault();
         alert('비밀번호를 입력하세요.');
-    } else if ($('#password').val().length < 8) {
+    } else if ($('#password').val().length < 8 || $('#password').val().length > 16) {
         e.preventDefault();
-        alert('비밀번호가 8자리 미만입니다.');
-    }
-
-    if(!isPassword($('#password').val())) {
+        alert('비밀번호는 8~16자리여야 합니다.');
+    } else if(!isPassword($('#password').val())) {
         e.preventDefault();
         alert('영문, 숫자, 특수문자를 최소 한 가지씩 조합하여 8~16자리 비밀번호를 입력하세요.');
     }
@@ -52,12 +52,24 @@ $('#submit').on('click', function(e){
 //     console.log('change 이벤트는 input 에 입력한 값이 바뀌고 포커스를 잃을 때 발생한다.');
 // })
 
-$('#pw-text').hide();
+$('#pw-text1').hide();
+$('#pw-text2').hide();
+
 $('#password').on('input', function(){
-    if($('#password').val() != '' && $('#password').val().length < 8){
-        $('#pw-text').show();
+    if($('#password').val() != ''){
+        if($('#password').val().length < 8){
+            $('#pw-text1').show();
+            $('#pw-text2').hide();
+        } else if ($('#password').val().length > 16){
+            $('#pw-text1').hide();
+            $('#pw-text2').show();
+        } else {
+            $('#pw-text1').hide();
+            $('#pw-text2').hide();
+        }
     } else {
-        $('#pw-text').hide();
+        $('#pw-text1').hide();
+        $('#pw-text2').hide();
     }
 })
 

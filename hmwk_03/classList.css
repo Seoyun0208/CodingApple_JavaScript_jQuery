@@ -28,10 +28,12 @@
   padding: 30px;
 }
 
-#pw-text {
+#pw-text1,
+#pw-text2 {
   color: red;
   font-weight: bold;
   margin-top: 5px;
+  font-size: 12px;
 }
 
 /* 상단 : Navbar */
