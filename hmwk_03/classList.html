@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="classList.css">
 
-    <title>Dark Mode 와 Light Mode 전환 버튼 누르면 Mode 전환하는 기능 만들기</title>
+    <title>setTimeout 타이머로 이벤트 배너 기능 만들기</title>
   </head>
   <body>
 
@@ -52,6 +52,10 @@
         <li class="list-group-item">A fourth item</li>
         <li class="list-group-item">And a fifth one</li>
     </ul>
+    <!-- 상단 : Timeout -->
+    <div class="alert alert-danger" id="time-alert">
+        🎁 <span id="time">5</span> 초 이내 구매 시 사은품 증정! 🎁
+    </div>
     <!-- 상단 : 메인 -->
     <div class="main-bg">
         <img src="./img/shoes.jpg" alt="">
@@ -133,6 +137,17 @@
         $('.navbar-toggler').eq(0).on('click', function(){
             $('.list-group').eq(0).slideToggle('show');
         })
+
+        // 상단 : Timeout
+        var count = 5;
+        setInterval(function(){
+            count -= 1;
+            if (count > 0) {
+                $('#time').html(count);
+            } else {
+                $('#time-alert').hide();
+            }
+        }, 1000);
     </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

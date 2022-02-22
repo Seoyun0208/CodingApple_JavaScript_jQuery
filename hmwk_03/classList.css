@@ -73,6 +73,11 @@
   visibility: visible;
 }
 
+/* 상단 : Timeout */
+.alert {
+  margin: 0;
+}
+
 /* 상단 : 메인 */
 .main-bg img {
   width: 100%;
