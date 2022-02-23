@@ -1,4 +1,4 @@
-// 상단 : 모달창
+// ! 상단 : 모달창
 $('.btn-login').eq(0).on('click', function(){
     $('.black-bg').eq(0).toggleClass('show');
 })
@@ -9,6 +9,18 @@ $('#close').on('click', function(){
     $('#pw-text1').hide();
     $('#pw-text2').hide();
     $('.black-bg').eq(0).toggleClass('show');
+})
+
+// e.target : 지금 실제로 클릭한 요소, JavaScript 문법
+// e.currentTarget : 지금 이벤트리스너가 달려있는 요소, JavaScript 문법
+// this : e.currentTarget 과 동일, JavaScript 문법
+// $(this) : e.currentTarget 과 동일, jQuery 문법
+// e.preventDefault() : 기본동작을 막는 함수, JavaScript 문법
+
+$('.black-bg').click(function(e){
+    if (e.target == this){
+        $(this).toggleClass('show');
+    }
 })
 
 function isEmail(asValue) {
@@ -73,7 +85,8 @@ $('#password').on('input', function(){
     }
 })
 
-// 상단 : Timeout
+
+// ! 상단 : Timeout
 var count = 5;
 setInterval(function(){
     count -= 1;
@@ -84,7 +97,8 @@ setInterval(function(){
     }
 }, 1000);
 
-// 중앙 : 이미지 슬라이드
+
+// ! 중앙 : 이미지 슬라이드
 var slide = 1;
 $('.slide-1').on('click', function(){
     $('.slide-container').css('transform', 'translateX(0vw)');

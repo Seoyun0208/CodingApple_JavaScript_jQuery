@@ -1,5 +1,4 @@
 // div 의 스크롤바 내린 양(scrollTop) + 눈에 보이는 div 높이(clientHeight) = div 의 실제높이(scrollHeight)
-var check = false;
 $('#sign-up-content').on('scroll', function(){
     let top = document.querySelector('#sign-up-content').scrollTop; // 917
     let sHeight = document.querySelector('#sign-up-content').scrollHeight; // 1509
