@@ -14,6 +14,7 @@ $('#badge').on('click', function(){
         $('.list-group-item').addClass('dark');
         $('.white-bg').addClass('dark');
         $('.btn').addClass('dark');
+        $('.tab-button').addClass('dark');
     } else {
         $('#badge').html('🌝 Dark Mode 🔄');
         $('body').removeClass('dark');
@@ -26,6 +27,7 @@ $('#badge').on('click', function(){
         $('.list-group-item').removeClass('dark');
         $('.white-bg').removeClass('dark');
         $('.btn').removeClass('dark');
+        $('.tab-button').removeClass('dark');
     }
 })
 
