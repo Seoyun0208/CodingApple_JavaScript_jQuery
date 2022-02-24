@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gray {
+  background: rgb(218, 216, 216);
+  height: 2550px;
+  margin-top: 300px;
+  width: 100%;
+}
+
+.text-container {
+  float: left;
+  width: 45%;
+}
+
+.text {
+  margin-top: 150px;
+}
+
+.image {
+  float: right;
+  width: 600px;
+  position: sticky;
+  top: 400px;
+}
