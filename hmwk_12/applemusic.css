@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card-background {
+  height: 3000px;
+  margin-top: 370px;
+}
+
+.card-box img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+}
+
+.card-box {
+  position: sticky;
+  top: 370px;
+  margin-top: 370px;
+  transition: all 0.3s;
+}
