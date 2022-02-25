@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin: 50px;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  width: 130px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: blueviolet;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
