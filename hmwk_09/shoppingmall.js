@@ -34,14 +34,15 @@ layout(products);
 // ! 가나다순 정렬 기능
 
 $('#sortAbc').click(function(){
-  products.sort(function(item1, item2){
+  let productsAbc = products.slice();
+  productsAbc.sort(function(item1, item2){
     if (item1.title < item2.title) return -1;
     else if (item1.title == item2.title) return 0;
     else return 1;
   });
 
   $('#items').html('');
-  layout(products);
+  layout(productsAbc);
   $('.title').css('background','#FFFF9A');
 
 })
@@ -49,16 +50,17 @@ $('#sortAbc').click(function(){
 // ! 가격순 정렬 기능
 
 // sort 함수는 기본적으로 문자 정렬
-// sort 함수는 기존의 데이터를 수정하지 않음
+// sort 함수는 원 배열이 정렬되므로 주의!
 
 $('#sortPrice').click(function(){
-  products.sort(function(item1, item2){
+  let productsPrice = products.slice();
+  productsPrice.sort(function(item1, item2){
     return item1.price - item2.price;
   });
 
   $('#items').html('');
 
-  layout(products);
+  layout(productsPrice);
   $('.price').css('background','#FFFF9A');
 })
 
@@ -73,13 +75,13 @@ $('#sortPrice').click(function(){
 // 기존의 데이터를 수정하므로 새로 변수에 담아 사용해야 함
 
 $('#filterPrice').click(function(){
-  let products2 = products.filter(function(item){
+  let productsFilter = products.filter(function(item){
     return item.price <= 60000;
   });
 
   $('#items').html('');
 
-  layout(products2);
+  layout(productsFilter);
   $('.price').css('background','#FFFF9A');
 })
 
