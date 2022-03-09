@@ -42,6 +42,7 @@ $('#sortAbc').click(function(){
 
   $('#items').html('');
   layout(products);
+  $('.title').css('background','#FFFF9A');
 
 })
 
@@ -58,6 +59,7 @@ $('#sortPrice').click(function(){
   $('#items').html('');
 
   layout(products);
+  $('.price').css('background','#FFFF9A');
 })
 
 
@@ -78,6 +80,7 @@ $('#filterPrice').click(function(){
   $('#items').html('');
 
   layout(products2);
+  $('.price').css('background','#FFFF9A');
 })
 
 
